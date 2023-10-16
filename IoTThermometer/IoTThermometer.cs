@@ -61,10 +61,12 @@ namespace IoTThermometer
             }
         }
 
-        // Genererar en slumpmässigt temperatur mellan 0°C och 35°C.
+        // Genererar en slumpmässigt temperatur mellan 0°C och 35°C. 
         private static double GenerateRandomTemperature()
         {
-            return Math.Round(random.NextDouble() * 35, 2);
+            return Math.Round(random.NextDouble() * 35, 1);
+            //return Math.Round(random.NextDouble() * 50, 1); //Kan ändra till detta för att testa validering!
+
         }
 
         // Metod för att skicka den genererade temperaturen till API:t med SignalR.

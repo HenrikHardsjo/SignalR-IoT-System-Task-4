@@ -7,7 +7,6 @@ builder.Services.AddSignalR();
 
 var app = builder.Build();
 
-
 //Lite klumpig lösning, men ser till att ##### Database ##### printas ut i cmd-rutan, så att det är lättare att hålla koll.
 bool hasPrintedStartupMessage = false;
 
@@ -23,6 +22,14 @@ app.Use(async (context, next) =>
 });
 
 app.UseHttpsRedirection();
+
+//Detta för CSP-krav.
+app.Use(async (context, next) =>
+{
+    context.Response.Headers.Add("Content-Security-Policy", "default-src 'none'");
+    await next();
+});
+
 app.UseRouting();
 app.UseAuthorization();
 
@@ -30,7 +37,6 @@ app.UseAuthorization();
 app.MapHub<DatabaseHub>("/databaseHub");
 
 app.Run();
-
 
 public class DatabaseHub : Hub
 {

@@ -10,6 +10,7 @@ builder.Services.AddSignalR();
 
 //Lite klumpig lösning, men ser till att ##### ApiConnection ##### printas ut i cmd-rutan, så att det är lättare att hålla koll.
 var app = builder.Build();
+
 bool hasPrintedStartupMessage = false;
 
 app.Use(async (context, next) =>
@@ -24,6 +25,14 @@ app.Use(async (context, next) =>
 });
 
 app.UseHttpsRedirection();
+
+//Detta för CSP-krav.
+app.Use(async (context, next) =>
+{
+    context.Response.Headers.Add("Content-Security-Policy", "default-src 'none'");
+    await next();
+});
+
 app.UseRouting();
 app.UseAuthorization();
 
@@ -51,7 +60,22 @@ public class ThermometerHub : Hub
     // Metod som tar emot temperaturen från IoTThermometer och skickar den vidare till Database.
     public async Task SendTemperature(byte[] encryptedTemperature)
     {
+        //Denna if-sats kontrollerar att den mottagna enkrypterade datan är ok.
+        if (encryptedTemperature == null || encryptedTemperature.Length == 0)
+        {
+            Console.WriteLine("Ogiltig eller tom krypterad data mottagen.");
+            return;
+        }
+
         double temperature = double.Parse(Encoding.UTF8.GetString(DecryptData(encryptedTemperature)));
+
+        //Denna if-sats kontrollerar att temperatur är inom rätt spann.
+        if (temperature <= 0 || temperature >= 35)
+        {
+            Console.WriteLine("Ogiltigt temperaturvärde mottaget.");
+            return;
+        }
+
         Console.WriteLine($"Mottagen temperatur: {temperature}°C");
 
         // Skicka temperaturen till DatabaseServer.
