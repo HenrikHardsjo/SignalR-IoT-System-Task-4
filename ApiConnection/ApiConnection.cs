@@ -57,4 +57,12 @@ public class ThermometerHub : Hub
         // Skickar temperaturen till DatabaseServer.
         await databaseServerConnection.SendAsync("StoreTemperature", temperature);
     }
+
+    // Metod som hämtar temperaturdata från databas.
+    public async Task<List<double>> GetTemperaturesFromDatabase()
+    {
+        return await databaseServerConnection.InvokeAsync<List<double>>("GetAllTemperatures");
+    }
+
+
 }

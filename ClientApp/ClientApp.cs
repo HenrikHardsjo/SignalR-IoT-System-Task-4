@@ -5,7 +5,7 @@ namespace ClientApp
     internal class Program
     {
         // Endpoint för DatabaseHub i Database.
-        private static readonly string hubUrl = "https://localhost:7239/databaseHub";
+        private static readonly string hubUrl = "https://localhost:7294/thermometerHub";
 
         private static HubConnection hubConnection;
 
@@ -49,7 +49,8 @@ namespace ClientApp
             try
             {
                 Console.WriteLine("Begär temperaturdata...");
-                var temperatures = await hubConnection.InvokeAsync<List<double>>("GetAllTemperatures");
+                var temperatures = await hubConnection.InvokeAsync<List<double>>("GetTemperaturesFromDatabase");
+
                 foreach (var temp in temperatures)
                 {
                     Console.WriteLine($"Temperatur: {temp}°C");
