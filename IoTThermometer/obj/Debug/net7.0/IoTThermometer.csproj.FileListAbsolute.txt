@@ -29,3 +29,4 @@ C:\Prog22\DataKomSakerhet\Uppgift4V2\SignalR-IoT-System-Task-4\IoTThermometer\ob
 C:\Prog22\DataKomSakerhet\Uppgift4V2\SignalR-IoT-System-Task-4\IoTThermometer\obj\Debug\net7.0\IoTThermometer.pdb
 C:\Prog22\DataKomSakerhet\Uppgift4V2\SignalR-IoT-System-Task-4\IoTThermometer\obj\Debug\net7.0\IoTThermometer.genruntimeconfig.cache
 C:\Prog22\DataKomSakerhet\Uppgift4V2\SignalR-IoT-System-Task-4\IoTThermometer\obj\Debug\net7.0\ref\IoTThermometer.dll
+C:\Prog22\DataKomSakerhet\Uppgift4V2\SignalR-IoT-System-Task-4\IoTThermometer\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll

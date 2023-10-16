@@ -1,11 +1,12 @@
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.AspNetCore.SignalR.Client;
+using System.Security.Cryptography;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Lägger till SignalR-tjänster till applikationen.
 builder.Services.AddSignalR();
-
 
 //Lite klumpig lösning, men ser till att ##### ApiConnection ##### printas ut i cmd-rutan, så att det är lättare att hålla koll.
 var app = builder.Build();
@@ -31,8 +32,6 @@ app.MapHub<ThermometerHub>("/thermometerHub");
 
 app.Run();
 
-Console.WriteLine("##### ApiConnection #####");
-
 public class ThermometerHub : Hub
 {
     // Skapar en statisk anslutning till DatabaseServern.
@@ -50,11 +49,12 @@ public class ThermometerHub : Hub
     }
 
     // Metod som tar emot temperaturen från IoTThermometer och skickar den vidare till Database.
-    public async Task SendTemperature(double temperature)
+    public async Task SendTemperature(byte[] encryptedTemperature)
     {
+        double temperature = double.Parse(Encoding.UTF8.GetString(DecryptData(encryptedTemperature)));
         Console.WriteLine($"Mottagen temperatur: {temperature}°C");
 
-        // Skickar temperaturen till DatabaseServer.
+        // Skicka temperaturen till DatabaseServer.
         await databaseServerConnection.SendAsync("StoreTemperature", temperature);
     }
 
@@ -64,5 +64,17 @@ public class ThermometerHub : Hub
         return await databaseServerConnection.InvokeAsync<List<double>>("GetAllTemperatures");
     }
 
-
+    // Metod för att dekryptera temperaturdata med DPAPI.
+    private static byte[] DecryptData(byte[] encryptedData)
+    {
+        try
+        {
+            return ProtectedData.Unprotect(encryptedData, null, DataProtectionScope.CurrentUser);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Decryption failed: {ex.Message}");
+            return null;
+        }
+    }
 }

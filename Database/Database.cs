@@ -31,7 +31,6 @@ app.MapHub<DatabaseHub>("/databaseHub");
 
 app.Run();
 
-Console.WriteLine("##### Database #####");
 
 public class DatabaseHub : Hub
 {

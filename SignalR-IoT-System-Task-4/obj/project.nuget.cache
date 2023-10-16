@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7cVV3ap7TSb/D+8yQW9O5Di3+7E0K0/o1bA3NTIP2rwBoCPwKluKSabv5Nr1YCSLCoxeMsjLcusgW9ULNnNwTA==",
+  "dgSpecHash": "xuKYHGBeJvsLPVbgmYl5Ahm5/A4unQDgBN92dFZxHrcpZqZ5ZVJ6sl1q+qR7NUSKR/4FVQHKuLJIrXn14YPShQ==",
   "success": true,
   "projectFilePath": "C:\\Prog22\\DataKomSakerhet\\Uppgift4V2\\SignalR-IoT-System-Task-4\\SignalR-IoT-System-Task-4\\SignalR-IoT-System-Task-4.csproj",
   "expectedPackageFiles": [
@@ -19,6 +19,7 @@
     "C:\\Users\\heha9\\.nuget\\packages\\microsoft.extensions.options\\7.0.1\\microsoft.extensions.options.7.0.1.nupkg.sha512",
     "C:\\Users\\heha9\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "C:\\Users\\heha9\\.nuget\\packages\\system.io.pipelines\\7.0.0\\system.io.pipelines.7.0.0.nupkg.sha512",
+    "C:\\Users\\heha9\\.nuget\\packages\\system.security.cryptography.protecteddata\\7.0.1\\system.security.cryptography.protecteddata.7.0.1.nupkg.sha512",
     "C:\\Users\\heha9\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512"
   ],
   "logs": []

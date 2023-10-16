@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "5Sc+W1CJJK0jWoF/y9LwKplZguYIK3x7eZ2ZkORxSckvxdK6Aufh1SBCZd6eLwtc9D3EUioYLbrcb+LAhyOmNQ==",
+  "dgSpecHash": "xW5/Bb84BsduxSi1iUwOw6DBgjiKnzkTHBkRCH8s1xig7dt7gEY53jZBVXdUzFB9Hv14bwwRBD3+MoAY1v5XQA==",
   "success": true,
   "projectFilePath": "C:\\Prog22\\DataKomSakerhet\\Uppgift4V2\\SignalR-IoT-System-Task-4\\Database\\Database.csproj",
   "expectedPackageFiles": [
@@ -26,6 +26,7 @@
     "C:\\Users\\heha9\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
     "C:\\Users\\heha9\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512",
     "C:\\Users\\heha9\\.nuget\\packages\\system.io.pipelines\\7.0.0\\system.io.pipelines.7.0.0.nupkg.sha512",
+    "C:\\Users\\heha9\\.nuget\\packages\\system.security.cryptography.protecteddata\\7.0.1\\system.security.cryptography.protecteddata.7.0.1.nupkg.sha512",
     "C:\\Users\\heha9\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512"
   ],
   "logs": []

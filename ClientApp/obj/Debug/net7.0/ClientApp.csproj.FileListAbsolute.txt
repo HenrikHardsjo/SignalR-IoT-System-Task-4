@@ -29,3 +29,4 @@ C:\Prog22\DataKomSakerhet\Uppgift4V2\SignalR-IoT-System-Task-4\ClientApp\obj\Deb
 C:\Prog22\DataKomSakerhet\Uppgift4V2\SignalR-IoT-System-Task-4\ClientApp\obj\Debug\net7.0\ClientApp.pdb
 C:\Prog22\DataKomSakerhet\Uppgift4V2\SignalR-IoT-System-Task-4\ClientApp\obj\Debug\net7.0\ClientApp.genruntimeconfig.cache
 C:\Prog22\DataKomSakerhet\Uppgift4V2\SignalR-IoT-System-Task-4\ClientApp\obj\Debug\net7.0\ref\ClientApp.dll
+C:\Prog22\DataKomSakerhet\Uppgift4V2\SignalR-IoT-System-Task-4\ClientApp\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll

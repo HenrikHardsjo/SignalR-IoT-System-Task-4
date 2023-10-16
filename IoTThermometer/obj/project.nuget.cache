@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "wQpFCizgp49eAKMEEmJCLtwqQ0rZ1b0t7uNPFGcDXzfuUbYQraj2L1C9mZpZ8nQmDOVka8jAfouZU6CBSgJQwA==",
+  "dgSpecHash": "crWraxYcJcBGPwNSWAsCr78rlw6RpQk3AOVmEpMLSL5lQNRAQixjgU8W2AmHOGs8oKkad+jhJN5Umku3ECVCKw==",
   "success": true,
   "projectFilePath": "C:\\Prog22\\DataKomSakerhet\\Uppgift4V2\\SignalR-IoT-System-Task-4\\IoTThermometer\\IoTThermometer.csproj",
   "expectedPackageFiles": [
@@ -19,6 +19,7 @@
     "C:\\Users\\heha9\\.nuget\\packages\\microsoft.extensions.options\\7.0.1\\microsoft.extensions.options.7.0.1.nupkg.sha512",
     "C:\\Users\\heha9\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "C:\\Users\\heha9\\.nuget\\packages\\system.io.pipelines\\7.0.0\\system.io.pipelines.7.0.0.nupkg.sha512",
+    "C:\\Users\\heha9\\.nuget\\packages\\system.security.cryptography.protecteddata\\7.0.1\\system.security.cryptography.protecteddata.7.0.1.nupkg.sha512",
     "C:\\Users\\heha9\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512"
   ],
   "logs": []

@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.SignalR.Client;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace IoTThermometer
 {
@@ -70,11 +72,28 @@ namespace IoTThermometer
         {
             try
             {
-                await hubConnection.SendAsync("SendTemperature", temperature);
+                // Konvertera temperatur till en sträng och sedan till en byte array för att kryptera.
+                var encryptedTemperature = EncryptData(Encoding.UTF8.GetBytes(temperature.ToString()));
+
+                await hubConnection.SendAsync("SendTemperature", encryptedTemperature);
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Fel vid skick av temperatur: {ex.Message}");
+            }
+        }
+
+        // Metod för att kryptera temperaturdata med DPAPI.
+        private static byte[] EncryptData(byte[] data)
+        {
+            try
+            {
+                return ProtectedData.Protect(data, null, DataProtectionScope.CurrentUser);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Encryption failed: {ex.Message}");
+                return null;
             }
         }
     }
