@@ -1,2 +1,2 @@
-# SignalR-IoT-System-Task-4 - Work in Progress
+# SignalR-IoT-System-Task-4 - DONE
 A system for reading simulated temperature data in real time, using SignalR
