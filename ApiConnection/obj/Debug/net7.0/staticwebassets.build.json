@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "jPFGyGTXOcpFRUpXgQ0xfzyvWSKJYLdKDTf0noH8/iE=",
+  "Source": "ApiConnection",
+  "BasePath": "_content/ApiConnection",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
