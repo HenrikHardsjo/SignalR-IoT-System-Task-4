@@ -1,1 +1,3 @@
-Det här systemet simulerar en IoT-termometer (IoTThermometer) som genererar slumpmässiga temperaturer (inom ett intervall). Dessa temperaturvärden krypteras och skickas sedan vidare i realtid till ett API (ApiConnection) som dekrypterar och validerar värdena och sedan skickar dem vidare till en databas (Database) där de sedan lagras. Förutom detta finns det även en klientapplikation (ClientApp) som kan anropa databasen via API:et för att hämta och visa alla lagrade temperaturvärden.
+Det här systemet simulerar en IoT-termometer (IoTThermometer) som genererar slumpmässiga temperaturer (inom ett intervall).
+Dessa temperaturvärden krypteras och skickas sedan vidare i realtid till ett API (ApiConnection) som dekrypterar och validerar värdena och sedan skickar dem vidare till en databas (Database) där de sedan lagras.
+Förutom detta finns det även en klientapplikation (ClientApp) som kan anropa databasen via API:et för att hämta och visa alla lagrade temperaturvärden.
